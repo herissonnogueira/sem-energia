@@ -1,12 +1,12 @@
-
-import './App.css'
+import './App.css';
+import ChamadoForm from './views/ChamadoForm';
 
 function App() {
   return (
-    <>
-      <h1>Hello, World!</h1>
-    </>
-  )
+    <div className="App">
+      <ChamadoForm />
+    </div>
+  );
 }
 
-export default App
+export default App;
