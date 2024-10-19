@@ -5,4 +5,5 @@ export interface Chamado {
     bairro: string;
     detalhes: string;
     createdAt?: string;
+    cep: string;
 }
