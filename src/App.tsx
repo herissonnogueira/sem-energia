@@ -1,10 +1,10 @@
 import './App.css';
-import ChamadoForm from './views/ChamadoForm';
+import LandingPage from './views/LandingPage';
 
-function App() {
+const App = () => {
   return (
     <div className="App">
-      <ChamadoForm />
+      <LandingPage />
     </div>
   );
 }

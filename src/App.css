@@ -1,4 +1,280 @@
 body {
-  font-family: "Roboto", sans-serif;
+  font-family: 'Roboto', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f7f9;
+  color: #333;
+  line-height: 1.6;
+}
+
+.landing-page {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+header {
+  text-align: center;
+  padding: 30px 0;
+}
+
+h1 {
+  font-size: 2.5em;
+  margin-bottom: 10px;
+  color: #3498db;
+}
+
+.subtitle {
+  font-size: 1.2em;
+  color: #7f8c8d;
+}
+
+main {
+  background-color: #FFFFFF;
+  padding: 30px;
+  border-radius: 10px;
+
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.options {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.option-button {
+  display: flex;
+  align-items: center;
   
+  justify-content: center;
+  padding: 15px;
+  font-size: 1em;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  text-decoration: none;
+  color: #FFFFFF;
+}
+
+.option-button i {
+  margin-right: 10px;
+  font-size: 1.2em;
+}
+
+.option-button:first-child {
+  background-color: #3498db;
+}
+
+.whatsapp-button {
+  background-color: #25D366;
+}
+
+.phone-button {
+  background-color: #34495e;
+}
+
+.app-links {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.app-link {
+  display: inline-block;
+  margin: 0 10px;
+  color: #3498db;
+  text-decoration: none;
+}
+
+.chamado-form {
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+input,
+select,
+textarea {
+  width: 100%;
+  padding: 12px;
+  font-size: 16px;
+  border: 1px solid #e0e0e0;
+  border-radius: 4px;
+  background-color: #ffffff;
+  color: #333;
+  transition: border-color 0.3s, box-shadow 0.3s;
+  box-sizing: border-box;
+}
+
+.error-message {
+  color: #e74c3c;
+  font-size: 14px;
+  margin-top: 5px;
+}
+
+.form-buttons {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.back-button, .submit-button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.back-button {
+  background-color: #95a5a6;
+  color: #FFFFFF;
+}
+
+.submit-button {
+  background-color: #3498db;
+  color: #FFFFFF;
+}
+
+footer {
+  text-align: center;
+  margin-top: 30px;
+  color: #7f8c8d;
+}
+
+@media (max-width: 768px) {
+  .landing-page {
+    padding: 10px;
+  }
+
+  main {
+    padding: 20px;
+  }
+
+  h1 {
+    font-size: 2em;
+  }
+
+  .option-button {
+    font-size: 0.9em;
+  }
+}
+
+
+@media (max-width: 480px) {
+  h1 {
+    font-size: 1.8em;
+  }
+
+  .subtitle {
+    font-size: 1em;
+  }
+
+  .option-button {
+    font-size: 0.8em;
+  }
+}
+
+@media (max-width: 768px) {
+  h1 {
+    font-size: 2.5em;
+  }
+
+  .features {
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  .feature {
+    flex-basis: 100%;
+  }
+
+  main {
+    padding: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  h1 {
+    font-size: 2em;
+  }
+
+  .cta-button {
+    width: 100%;
+  }
+}
+
+select {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath fill='%23888' d='M10.59 0.59L6 5.17L1.41 0.59L0 2L6 8L12 2L10.59 0.59Z'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 12px center;
+  background-size: 12px;
+  padding-right: 40px;
+  cursor: pointer;
+}
+
+select:focus {
+  outline: none;
+  border-color: #3498db;
+  box-shadow: 0 0 0 2px rgba(52, 152, 219, 0.1);
+}
+
+select:hover {
+  border-color: #3498db;
+}
+
+select option[value=""] {
+  color: #888;
+}
+
+select option {
+  color: #333;
+}
+
+@media (max-width: 480px) {
+  select {
+    font-size: 14px;
+    padding: 8px 25px 8px 8px;
+  }
+}
+
+@media (max-width: 768px) {
+  input,
+  select,
+  textarea {
+    font-size: 15px;
+    padding: 10px;
+  }
+
+  select {
+    background-position: right 10px center;
+    padding-right: 35px;
+  }
+}
+
+@media (max-width: 480px) {
+  input,
+  select,
+  textarea {
+    font-size: 14px;
+    padding: 8px;
+  }
+
+  select {
+    background-position: right 8px center;
+    padding-right: 30px;
+  }
+}
+
+.loading-message {
+  color: #3498db;
+  font-size: 14px;
+  margin-top: 5px;
 }

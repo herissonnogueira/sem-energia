@@ -1,9 +1,9 @@
 export interface Chamado {
-    id?: number;
     nome: string;
     endereco: string;
     bairro: string;
+    cidade: string;
+    estado: string;
     detalhes: string;
-    createdAt?: string;
     cep: string;
 }
