@@ -2,6 +2,7 @@ import { useState, useCallback, ChangeEvent, FormEvent } from 'react';
 import { ChamadoController } from '../controllers/ChamadoController';
 import { Chamado } from '../models/Chamado';
 import { cidadesSP } from '../utils/cidadesSP';
+import { toast } from 'react-toastify';
 
 interface ChamadoFormProps {
   onBack: () => void;
@@ -88,6 +89,7 @@ const ChamadoForm = ({ onBack }: ChamadoFormProps) => {
     async (e: FormEvent<HTMLFormElement>) => {
       e.preventDefault();
       setIsLoading(true);
+
       try {
         await chamadoController.criarChamado(formData);
         setFormData({
@@ -95,14 +97,15 @@ const ChamadoForm = ({ onBack }: ChamadoFormProps) => {
           endereco: '',
           bairro: '',
           cidade: '',
-          estado: '',
+          estado: 'SP',
           detalhes: '',
           cep: '',
         });
-        alert('Chamado registrado com sucesso!');
+        toast.success('Chamado registrado com sucesso!');
+        onBack(); // voltar para a página inicial
       } catch (error) {
         console.error('Erro ao registrar chamado:', error);
-        alert('Erro ao registrar chamado. Por favor, tente novamente.');
+        toast.error('Erro ao registrar chamado. Por favor, tente novamente.');
       } finally {
         setIsLoading(false);
       }

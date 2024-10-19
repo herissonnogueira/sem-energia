@@ -1,11 +1,14 @@
 import './App.css';
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 import LandingPage from './views/LandingPage';
 
-const App = () => {
+function App() {
   return (
-    <div className="App">
+    <>
       <LandingPage />
-    </div>
+      <ToastContainer />
+    </>
   );
 }
 
