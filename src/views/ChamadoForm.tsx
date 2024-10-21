@@ -46,17 +46,17 @@ const ChamadoForm = ({ onBack }: ChamadoFormProps) => {
       if (!response.ok) {
         throw new Error('Falha na conexão com o serviço de CEP');
       }
-
+  
       const data = await response.json();
-
+  
       if (data.erro) {
         throw new Error('CEP não encontrado');
       }
-
+  
       if (data.uf !== 'SP') {
         throw new Error('CEP não pertence ao Estado de São Paulo');
       }
-
+  
       setFormData((prevState) => ({
         ...prevState,
         endereco: data.logradouro || '',
@@ -72,18 +72,18 @@ const ChamadoForm = ({ onBack }: ChamadoFormProps) => {
         cidade: '',
         estado: 'SP',
       }));
-
+  
       if (error instanceof Error) {
-        setCepError(error.message);
+        setCepError('Não foi possível buscar as informações do CEP. Verifique sua conexão ou tente novamente mais tarde.');
       } else if (error instanceof TypeError && error.message === 'Failed to fetch') {
-        setCepError('Falha na conexão. Verifique sua internet e tente novamente.');
+        setCepError('Falha na conexão com o serviço de CEP. Verifique sua internet e tente novamente.');
       } else {
         setCepError('Erro ao buscar CEP. Por favor, verifique o número digitado e tente novamente.');
       }
     } finally {
       setIsLoadingCep(false);
     }
-  };
+  };  
 
   const handleSubmit = useCallback(
     async (e: FormEvent<HTMLFormElement>) => {
