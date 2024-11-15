@@ -6,6 +6,7 @@ Sem Energia é uma aplicação web que permite aos usuários registrar ocorrênc
 
 - Registro de ocorrências de falta de energia
 - Consulta automática de endereço por CEP
+- Mapa interativo: Exibição de chamados em tempo real em um mapa, utilizando Leaflet.
 - Notificações toast para feedback do usuário
 - Interface responsiva para uso em dispositivos móveis e desktop
 
@@ -16,6 +17,7 @@ Sem Energia é uma aplicação web que permite aos usuários registrar ocorrênc
 - Vite
 - Supabase
 - React-Toastify
+- Leaflet
 
 ## Pré-requisitos
 
